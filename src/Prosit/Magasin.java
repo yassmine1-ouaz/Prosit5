@@ -55,7 +55,11 @@ public Magasin (int id ,String adresse){
 
 }
 public void ajouterProduit (Produit p){
+    try {
     if (this.capacite<50){
+        throw (new MagasinPleinException("Magasin Plein"));
+    }
+    else{
     // quest 2
     if (rechercher (p)){
     //tab[i]=2;    
@@ -66,7 +70,7 @@ public void ajouterProduit (Produit p){
         System.out.println("Tableau plient .....");
     }
     
-}
+}}
 
 }
   @Override
